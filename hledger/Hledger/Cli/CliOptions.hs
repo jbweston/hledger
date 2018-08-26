@@ -515,6 +515,7 @@ outputFormats =
   [defaultOutputFormat] ++
   ["csv"
   ,"html"
+  ,"json"
   ]
 
 -- | Get the output format from the --output-format option,

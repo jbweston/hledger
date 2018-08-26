@@ -206,6 +206,8 @@ compoundBalanceCommand CompoundBalanceCommandSpec{..} opts@CliOpts{reportopts_=r
       case format of
         "csv"  -> printCSV (compoundBalanceReportAsCsv ropts cbr) ++ "\n"
         "html" -> (++ "\n") $ TL.unpack $ L.renderText $ compoundBalanceReportAsHtml ropts cbr
+        "json" -> error' "Sorry, HTML output is not yet implemented for this kind of report."  -- TODO
+
         _      -> compoundBalanceReportAsText ropts' cbr
 
 -- | Run one subreport for a compound balance command in multi-column mode.
